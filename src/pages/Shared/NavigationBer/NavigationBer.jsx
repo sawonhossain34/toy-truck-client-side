@@ -17,14 +17,14 @@ const NavigationBer = () => {
                     </ul>
                 </div>
                 <img src={logo} alt="" />
-                <a className="btn btn-ghost normal-case text-xl">Toy Truck</a>
+                <a className="btn btn-ghost normal-case text-4xl font-bold">Toy Truck</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex ">
                 <ul className="menu menu-horizontal px-1">
 
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to='/alltoys'>All Toys</Link></li>
-                    <li><Link to='/blog'>Blog</Link></li>
+                    <li className="font-bold"><Link to="/">Home</Link></li>
+                    <li className="font-bold"><Link to='/alltoys'>All Toys</Link></li>
+                    <li className="font-bold"><Link to='/blog'>Blog</Link></li>
 
                 </ul>
             </div>
