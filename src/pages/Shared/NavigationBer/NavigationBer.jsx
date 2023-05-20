@@ -29,7 +29,7 @@ const NavigationBer = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link>login</Link>
+                <Link to='/login'>login</Link>
             </div>
         </div>
     );
