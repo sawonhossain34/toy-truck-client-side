@@ -1,12 +1,13 @@
+import Hiring from "../Hiring/Hiring";
+import Quality from "../Quality/Quality";
 import Slider from "../Slider/Slider";
-// import Toys from "../Toys/Toys";
-
 
 const Home = () => {
     return (
         <div className="mt-4">
             <Slider></Slider>
-            {/* <Toys></Toys> */}
+            <Quality></Quality>
+            <Hiring></Hiring>
         </div>
     );
 };

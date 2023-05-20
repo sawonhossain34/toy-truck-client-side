@@ -46,7 +46,7 @@ const NavigationBer = () => {
                     </div>
                 </div>
                 {
-                    user?.email ? <button className="" onClick={handleLogout}>Logout</button> :
+                    user?.email ? <button className="btn btn-secondary" onClick={handleLogout}>Logout</button> :
                         <Link to='/login'>login</Link>
                 }
                 {/* <Link to='/login'>login</Link> */}

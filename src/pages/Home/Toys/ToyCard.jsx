@@ -11,11 +11,11 @@ const ToyCard = ({ toy,index }) => {
             <tr>
                 <th>{index+1}</th>
                 <td>{user?.displayName}</td>
-                <td>{toy_name}</td>
                 <td>{sub_category}</td>
+                <td>{toy_name}</td>
                 <td>{price}</td>
                 <td>{available_quantity}</td>
-                <td><Link to={`/toyDetails/${_id}`}><button className="border-spacing-2 btn btn-primary">View Details<FaArrowRight></FaArrowRight></button></Link></td>
+                <td><Link to={`/toyDetails/${_id}`}><button className="border-spacing-2 btn btn-secondary">View Details<FaArrowRight></FaArrowRight></button></Link></td>
                 
             </tr>
     );
