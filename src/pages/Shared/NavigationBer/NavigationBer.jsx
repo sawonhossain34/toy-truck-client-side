@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/logo truck.png';
+import { useContext } from "react";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 
 const NavigationBer = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error))
+    }
+
     return (
         <div className="navbar bg-base-100 h-24 mb-2">
             <div className="navbar-start">
@@ -29,7 +40,16 @@ const NavigationBer = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login'>login</Link>
+                <div className="avatar mr-4">
+                    <div className="w-8 rounded-full">
+                        {user?.photoURL}
+                    </div>
+                </div>
+                {
+                    user?.email ? <button className="" onClick={handleLogout}>Logout</button> :
+                        <Link to='/login'>login</Link>
+                }
+                {/* <Link to='/login'>login</Link> */}
             </div>
         </div>
     );
