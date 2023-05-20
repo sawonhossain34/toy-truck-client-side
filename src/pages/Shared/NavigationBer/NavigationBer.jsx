@@ -12,7 +12,7 @@ const NavigationBer = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to='/alltoys'>All Toys</Link></li>
+                        <li><Link to='/toys'>All Toys</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                     </ul>
                 </div>
@@ -23,7 +23,7 @@ const NavigationBer = () => {
                 <ul className="menu menu-horizontal px-1">
 
                     <li className="font-bold"><Link to="/">Home</Link></li>
-                    <li className="font-bold"><Link to='/alltoys'>All Toys</Link></li>
+                    <li className="font-bold"><Link to='/toys'>All Toys</Link></li>
                     <li className="font-bold"><Link to='/blog'>Blog</Link></li>
 
                 </ul>

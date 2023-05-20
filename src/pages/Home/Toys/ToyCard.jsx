@@ -1,21 +1,23 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../contexts/AuthProvider";
+import { FaArrowRight } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
-
-const ToyCard = ({ toy }) => {
-    const { user } = useContext(AuthContext)
-    const { toy_name, price, available_quantity, img, sub_category } = toy;
+const ToyCard = ({ toy,index }) => {
+    const { user } = useContext(AuthContext);
+    const { _id,toy_name, price, available_quantity, sub_category } = toy;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={img} alt="Shoes" /></figure>
-            <h2 className="card-title text-center">{toy_name}</h2>
-            <div className="card-body">
-                <h2 className="card-title">Seller Name : {user?.displayName}</h2>
-                <h3>Category : {sub_category}</h3>
-                <p className="text-amber-600 font-bold">price : ${price}</p>
-                <p>Available Quantity : {available_quantity}</p>
-            </div>
-        </div>
+       
+            <tr>
+                <th>{index+1}</th>
+                <td>{user?.displayName}</td>
+                <td>{toy_name}</td>
+                <td>{sub_category}</td>
+                <td>{price}</td>
+                <td>{available_quantity}</td>
+                <td><Link to={`/toyDetails/${_id}`}><button className="border-spacing-2 btn btn-primary">View Details<FaArrowRight></FaArrowRight></button></Link></td>
+                
+            </tr>
     );
 };
 
