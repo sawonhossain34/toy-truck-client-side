@@ -3,7 +3,7 @@ import logo from '../../../assets/logo truck.png';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer p-10 bg-red-50 text-base-content">
                 <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Branding</a>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+            <footer className="footer px-10 py-4 border-t bg-red-50 text-base-content border-base-300">
                 <div className="items-center grid-flow-col space-y-3">
                     <div>
                     <img src={logo} alt="" />
@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
 
             </footer>
-            <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+            <footer className="footer footer-center p-4 bg-red-50 text-base-content">
                 <div>
                     <p>Copyright © 2023 - All right reserved by Toy Truck</p>
                 </div>
