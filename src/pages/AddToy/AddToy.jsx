@@ -1,8 +1,9 @@
 
+
 const AddToy = () => {
     return (
         <div>
-            <h3>Add toy page</h3>
+            <h2>add toy section</h2>
         </div>
     );
 };

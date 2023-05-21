@@ -4,8 +4,12 @@ import { Navigate, useLocation } from "react-router-dom";
 
 
 const ProtectedRoute = ({children}) => {
-    const {user} =useContext(AuthContext);
+    const {user , loading} =useContext(AuthContext);
     const location = useLocation();
+
+    if(loading){
+        return <progress className="progress progress-warning w-56" value="40" max="100"></progress>
+    }
 
     if(user){
         return children;

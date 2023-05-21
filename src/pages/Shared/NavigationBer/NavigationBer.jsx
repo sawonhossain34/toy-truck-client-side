@@ -37,8 +37,8 @@ const NavigationBer = () => {
                     <li className="font-bold"><Link to='/toys'>All Toys</Link></li>
                     {
                         user?.email && <>
-                            <li className="font-bold"><Link to='/toys'>My Toys</Link></li>
-                            <li className="font-bold"><Link to='/toys'>Add a Toys</Link></li>
+                            <li className="font-bold"><Link to='/mytoys'>My Toys</Link></li>
+                            <li className="font-bold"><Link to='/addtoys'>Add a Toys</Link></li>
                         </>
                     }
                     <li className="font-bold"><Link to='/blog'>Blog</Link></li>

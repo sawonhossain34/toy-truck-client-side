@@ -14,7 +14,7 @@ const ImgGallery = () => {
         'https://i.ibb.co/y80hGyv/gallery-10.jpg'
     ];
     return (
-        <div>
+        <div className='my-12'>
             <div className="image-gallery">
                 {images.map((image, index) => (
                     <img key={index} 
