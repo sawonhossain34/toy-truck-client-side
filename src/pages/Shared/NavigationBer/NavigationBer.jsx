@@ -35,19 +35,31 @@ const NavigationBer = () => {
 
                     <li className="font-bold"><Link to="/">Home</Link></li>
                     <li className="font-bold"><Link to='/toys'>All Toys</Link></li>
+                    {
+                        user?.email && <>
+                            <li className="font-bold"><Link to='/toys'>My Toys</Link></li>
+                            <li className="font-bold"><Link to='/toys'>Add a Toys</Link></li>
+                        </>
+                    }
                     <li className="font-bold"><Link to='/blog'>Blog</Link></li>
 
                 </ul>
             </div>
             <div className="navbar-end">
                 <div className="avatar mr-4">
-                    <div className="w-8 rounded-full">
+                    {/* <div className="w-8 rounded-full">
                         {user?.photoURL}
+                    </div> */}
+                    <div className={user?.photoURL || 'w-8 rounded-full'}>
+
                     </div>
                 </div>
                 {
-                    user?.email ? <button className="btn btn-secondary" onClick={handleLogout}>Logout</button> :
-                        <Link to='/login'>login</Link>
+                    user?.email ? <>
+                        <button className="btn btn-secondary" onClick={handleLogout}>Logout</button>
+
+                    </> :
+                        <button className="btn btn-secondary" ><Link to='/login'>login</Link></button>
                 }
                 {/* <Link to='/login'>login</Link> */}
             </div>
